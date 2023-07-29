@@ -62,7 +62,8 @@ async def main(phone):
     my_channel = await client.get_entity(entity)
 
     offset_id = 0
-    limit = 100
+    numb = eval(input("enter your number of massage you want to download : "))
+    limit = numb
     all_messages = []
     total_messages = 0
     total_count_limit = 0

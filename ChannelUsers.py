@@ -26,6 +26,7 @@ username = config['Telegram']['username']
 # Create the client and connect
 client = TelegramClient(username, api_id, api_hash)
 
+
 async def main(phone):
     await client.start()
     print("Client Created")
@@ -70,6 +71,7 @@ async def main(phone):
 
     with open('user_data.json', 'w') as outfile:
         json.dump(all_user_details, outfile)
+
 
 with client:
     client.loop.run_until_complete(main(phone))
